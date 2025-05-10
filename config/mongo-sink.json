@@ -1,0 +1,8 @@
+{
+  "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+  "connection.uri": "mongodb://mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0",
+  "value.converter.schemas.enable": false,
+  "database": "data",
+  "collection": "dst",
+  "topics": "data.src"
+}

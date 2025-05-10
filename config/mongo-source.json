@@ -1,0 +1,8 @@
+{
+  "connector.class": "com.mongodb.kafka.connect.MongoSourceConnector",
+  "connection.uri": "mongodb://mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0",
+  "database": "data",
+  "collection": "src",
+  "pipeline": "[{'$match': {'operationType': {'$in': ['insert', 'update', 'replace'], }}}]",
+  "change.stream.full.document": "updateLookup"
+}
