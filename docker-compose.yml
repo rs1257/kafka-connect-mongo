@@ -103,6 +103,9 @@ services:
       CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_PLUGIN_PATH: '/usr/share/java,/etc/kafka-connect/jars,/usr/share/confluent-hub-components'
+      CONNECT_REST_EXTENSION_CLASSES: 'com.pascal.kafka.connect.rest.extension.RestExtension'
+    volumes:
+      - ./plugins:/etc/kafka-connect/jars
     depends_on:
       - zookeeper
       - kafka-broker

@@ -10,6 +10,9 @@ restart:
 ping:
 	curl 127.0.0.1:8083
 
+info:
+	curl 127.0.0.1:8083/info
+
 list-connectors:
 	curl 127.0.0.1:8083/connectors
 
